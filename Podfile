@@ -3,4 +3,5 @@ use_frameworks!
 
 target 'SmartFarm' do
   pod 'MQTTClient'
+  pod 'TYCyclePagerView'
 end
