@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		833877E007A8CA8B3044B8E1 /* Pods_SmartFarm.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E2224D445AA410252F9CE68B /* Pods_SmartFarm.framework */; };
+		CB378DA022BC7CAC004D41F6 /* TYCyclePagerViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = CB378D9F22BC7CAC004D41F6 /* TYCyclePagerViewCell.m */; };
 		CB7F517322A6C2EC00D5111B /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = CB7F517222A6C2EC00D5111B /* AppDelegate.m */; };
 		CB7F517622A6C2EC00D5111B /* FirstViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CB7F517522A6C2EC00D5111B /* FirstViewController.m */; };
 		CB7F517922A6C2EC00D5111B /* SecondViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CB7F517822A6C2EC00D5111B /* SecondViewController.m */; };
@@ -39,6 +40,8 @@
 /* Begin PBXFileReference section */
 		3F83CA3E25618F2EB2A7326E /* Pods-SmartFarm.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SmartFarm.release.xcconfig"; path = "Target Support Files/Pods-SmartFarm/Pods-SmartFarm.release.xcconfig"; sourceTree = "<group>"; };
 		9CE9D6305B8615511A37C3FF /* Pods-SmartFarm.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SmartFarm.debug.xcconfig"; path = "Target Support Files/Pods-SmartFarm/Pods-SmartFarm.debug.xcconfig"; sourceTree = "<group>"; };
+		CB378D9E22BC7CAC004D41F6 /* TYCyclePagerViewCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TYCyclePagerViewCell.h; sourceTree = "<group>"; };
+		CB378D9F22BC7CAC004D41F6 /* TYCyclePagerViewCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TYCyclePagerViewCell.m; sourceTree = "<group>"; };
 		CB7F516E22A6C2EC00D5111B /* SmartFarm.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SmartFarm.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		CB7F517122A6C2EC00D5111B /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		CB7F517222A6C2EC00D5111B /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -139,6 +142,8 @@
 				CB7F517F22A6C2EE00D5111B /* LaunchScreen.storyboard */,
 				CB7F518222A6C2EE00D5111B /* Info.plist */,
 				CB7F518322A6C2EE00D5111B /* main.m */,
+				CB378D9E22BC7CAC004D41F6 /* TYCyclePagerViewCell.h */,
+				CB378D9F22BC7CAC004D41F6 /* TYCyclePagerViewCell.m */,
 			);
 			path = SmartFarm;
 			sourceTree = "<group>";
@@ -337,6 +342,7 @@
 			files = (
 				CB7F517922A6C2EC00D5111B /* SecondViewController.m in Sources */,
 				CB7F517322A6C2EC00D5111B /* AppDelegate.m in Sources */,
+				CB378DA022BC7CAC004D41F6 /* TYCyclePagerViewCell.m in Sources */,
 				CB7F518422A6C2EE00D5111B /* main.m in Sources */,
 				CB7F517622A6C2EC00D5111B /* FirstViewController.m in Sources */,
 			);
