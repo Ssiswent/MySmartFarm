@@ -33,7 +33,7 @@
 - (instancetype)initWithFrame:(CGRect)frame {
     if (self = [super initWithFrame:frame]) {
         self.backgroundColor = [UIColor clearColor];
-        [self addLabel];
+        [self addView];
     }
     return self;
 }
@@ -41,47 +41,40 @@
 - (instancetype)initWithCoder:(NSCoder *)aDecoder {
     if (self = [super initWithCoder:aDecoder]) {
         self.backgroundColor = [UIColor clearColor];
-        [self addLabel];
+        [self addView];
     }
     return self;
 }
 
 
-- (void)addLabel {
-//    UILabel *label = [[UILabel alloc]init];
-//    label.textAlignment = NSTextAlignmentCenter;
-//    label.textColor = [UIColor whiteColor];
-//    label.font = [UIFont systemFontOfSize:18];
-//    [self addSubview:label];
-//    _label = label;
-    
+- (void)addView {
     UILabel *label = [[UILabel alloc]init];
     label.text = @"光照温湿度变送器";
     label.textColor = [UIColor blackColor];
     label.font = [UIFont boldSystemFontOfSize:24];
     label.textAlignment = NSTextAlignmentLeft;
-    label.frame = CGRectMake(10, 10, 200, 30);
+    label.frame = CGRectMake(10, 30, 200, 30);
     
     UILabel *lblTemp = [[UILabel alloc]init];
     lblTemp.text = @"25";
     lblTemp.textColor = [UIColor colorWithRed:89.0/255.0 green:221.0/255.0 blue:112.0/255.0 alpha:1.0];
     lblTemp.font = [UIFont boldSystemFontOfSize:24];
     lblTemp.textAlignment = NSTextAlignmentRight;
-    lblTemp.frame = CGRectMake(62, 92.5, 100, 25);
+    lblTemp.frame = CGRectMake(62, 112.5, 100, 25);
     
     UILabel *lblLight = [[UILabel alloc]init];
     lblLight.text = @"3495";
     lblLight.textColor = [UIColor colorWithRed:89.0/255.0 green:221.0/255.0 blue:112.0/255.0 alpha:1.0];
     lblLight.font = [UIFont boldSystemFontOfSize:24];
     lblLight.textAlignment = NSTextAlignmentRight;
-    lblLight.frame = CGRectMake(252, 92.5, 100, 25);
+    lblLight.frame = CGRectMake(252, 112.5, 100, 25);
     
     UILabel *lblAir = [[UILabel alloc]init];
     lblAir.text = @"79";
     lblAir.textColor = [UIColor colorWithRed:89.0/255.0 green:221.0/255.0 blue:112.0/255.0 alpha:1.0];
     lblAir.font = [UIFont boldSystemFontOfSize:24];
     lblAir.textAlignment = NSTextAlignmentRight;
-    lblAir.frame = CGRectMake(62, 202, 100, 25);
+    lblAir.frame = CGRectMake(62, 222, 100, 25);
     
     UIImage *temp = [UIImage imageNamed:@"temp"];
     
@@ -103,15 +96,15 @@
     
     //上面括号内的设置方式可以让图片以原图尺寸显示
     
-    viewTemp.frame = CGRectMake(10, 60, 165, 90);
+    viewTemp.frame = CGRectMake(10, 80, 165, 90);
     
     viewTemp.contentMode=UIViewContentModeScaleAspectFit;
     
-    viewLight.frame = CGRectMake(200, 60, 165, 90);
+    viewLight.frame = CGRectMake(200, 80, 165, 90);
     
     viewLight.contentMode=UIViewContentModeScaleAspectFit;
     
-    viewAir.frame = CGRectMake(10, 170, 165, 90);
+    viewAir.frame = CGRectMake(10, 190, 165, 90);
     
     viewAir.contentMode=UIViewContentModeScaleAspectFit;
     
