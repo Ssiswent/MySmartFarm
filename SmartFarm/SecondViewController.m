@@ -87,6 +87,8 @@
     // New message received in topic
     NSLog(@"订阅的主题是： %@",topic);
     
+    [_pagerView reloadData];
+    
     NSString *dataString = [[NSString alloc] initWithData:data encoding:NSUTF8StringEncoding];
     NSLog(@"收到的是：%@\n",dataString);
     //NSData* jsonData = [dataString dataUsingEncoding:NSUTF8StringEncoding];
@@ -119,6 +121,10 @@
             NSLog(@"!!!!!\n");
             NSString* ID = [dic objectForKey:@"ID"];
             NSLog(@"ID is %@\n",ID);
+            
+            //NSString转NSNumber
+            NSNumber *numID = @([ID integerValue]);
+            
             NSString* Type = [dic objectForKey:@"Type"];
             NSLog(@"Type is %@\n",Type);
             NSArray* DataArray = [dic objectForKey:@"Data"];
@@ -127,12 +133,12 @@
                 NSLog(@"Data is %@",DataArray[i]);
                 i++;
             }
-            if([ID isEqualToString:@"1"])
+            if([numID isEqualToNumber:[NSNumber numberWithInteger:1]])
             {
                 //设置lbl的text
-                _temp = DataArray[0];
-                _light = DataArray[1];
-                _air = DataArray[2];
+                _temp = [NSString stringWithFormat:@"%@",DataArray[0]];
+                _light = [NSString stringWithFormat:@"%@",DataArray[1]];
+                _air = [NSString stringWithFormat:@"%@",DataArray[2]];
             }
         }
 
