@@ -21,6 +21,10 @@
 @property (nonatomic, strong) TYPageControl *pageControl;
 @property (nonatomic, strong) NSArray *datas;
 
+@property (nonatomic, strong) NSString *temp;
+@property (nonatomic, strong) NSString *light;
+@property (nonatomic, strong) NSString *air;
+
 @end
 
 @implementation SecondViewController
@@ -122,10 +126,13 @@
             for(dic in DataArray){
                 NSLog(@"Data is %@",DataArray[i]);
                 i++;
-                if([ID isEqualToString:@"1"])
-                {
-                    
-                }
+            }
+            if([ID isEqualToString:@"1"])
+            {
+                //设置lbl的text
+                _temp = DataArray[0];
+                _light = DataArray[1];
+                _air = DataArray[2];
             }
         }
 
@@ -187,8 +194,11 @@
 
 - (UICollectionViewCell *)pagerView:(TYCyclePagerView *)pagerView cellForItemAtIndex:(NSInteger)index {
     TYCyclePagerViewCell *cell = [pagerView dequeueReusableCellWithReuseIdentifier:@"cellId" forIndex:index];
-//    cell.backgroundColor = _datas[index];
+//    cell.backgroundColor _datas[index];
 //    cell.label.text = [NSString stringWithFormat:@"index->%ld",index];
+    cell.lblTemp.text = _temp;
+    cell.lblLight.text = _light;
+    cell.lblAir.text = _air;
     return cell;
 }
 

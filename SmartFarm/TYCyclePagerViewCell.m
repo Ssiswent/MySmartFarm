@@ -67,7 +67,21 @@
     lblTemp.textColor = [UIColor colorWithRed:89.0/255.0 green:221.0/255.0 blue:112.0/255.0 alpha:1.0];
     lblTemp.font = [UIFont boldSystemFontOfSize:24];
     lblTemp.textAlignment = NSTextAlignmentRight;
-    lblTemp.frame = CGRectMake(82, 92.5, 80, 25);
+    lblTemp.frame = CGRectMake(62, 92.5, 100, 25);
+    
+    UILabel *lblLight = [[UILabel alloc]init];
+    lblLight.text = @"3495";
+    lblLight.textColor = [UIColor colorWithRed:89.0/255.0 green:221.0/255.0 blue:112.0/255.0 alpha:1.0];
+    lblLight.font = [UIFont boldSystemFontOfSize:24];
+    lblLight.textAlignment = NSTextAlignmentRight;
+    lblLight.frame = CGRectMake(252, 92.5, 100, 25);
+    
+    UILabel *lblAir = [[UILabel alloc]init];
+    lblAir.text = @"79";
+    lblAir.textColor = [UIColor colorWithRed:89.0/255.0 green:221.0/255.0 blue:112.0/255.0 alpha:1.0];
+    lblAir.font = [UIFont boldSystemFontOfSize:24];
+    lblAir.textAlignment = NSTextAlignmentRight;
+    lblAir.frame = CGRectMake(62, 202, 100, 25);
     
     UIImage *temp = [UIImage imageNamed:@"temp"];
     
@@ -112,10 +126,14 @@
     
     [self addSubview:viewLight];
     _viewLight = viewLight;
+    [self addSubview:lblLight];
+    _lblLight = lblLight;
     
     
     [self addSubview:viewAir];
     _viewAir = viewAir;
+    [self addSubview:lblAir];
+    _lblAir = lblAir;
     
     
     
